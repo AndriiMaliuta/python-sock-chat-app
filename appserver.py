@@ -51,7 +51,7 @@ def main():
         broadcast(f"{nickname} joined the chat")  # encode
         client.send("Youe are now connected!".encode("utf-8"))
 
-        thread = Thread(target=handle_connection, args=(client,))
+        thread = threading.Thread(target=handle_connection, args=(client,))
         thread.start()
 
 
